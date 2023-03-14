@@ -1,0 +1,41 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'banner-styles.css' %}">
+  </head>
+  <header>
+    <div class="logo-image">
+      <h1><a href="{% url 'home' %}"><img src="{% static 'Logo-main1.png'%}" alt="SuperMarkIt"/></a></h1>
+    </div>
+    <nav>
+      <ul>
+        {% if user.is_authenticated %}
+          <li><a href="{% url 'products:categories' %}" class="tag-categories-base">Categories</a></li>
+          <li><a href="{% url 'products:main' %}" class="tag-products-base">Products</a></li>
+          <li><a href="{% url 'basket:basket' %}" class="tag-basket-base">Basket</a></li>
+          <li>
+            <form class="logout-link" action="{% url 'accounts:logout' %}" method="post">
+              {% csrf_token %}
+              <button type="submit" name="btn-logout">Logout</button>
+            </form>
+          </li>
+        {% else %}
+          <li><a href="{% url 'products:categories' %}" class="tag-categories-base">Categories</a></li>
+          <li><a href="{% url 'products:main' %}" class="tag-products-base">Products</a></li>
+          <li><a href="{% url 'basket:basket' %}" class="tag-basket-base">Basket</a></li>
+          <li><a href="{% url 'accounts:login' %}" class="tag-login-base">Login</a></li>
+          <li><a href="{% url 'accounts:register' %}" class="tag-register-base">Register</a></li>
+        {% endif %}
+      </ul>
+    </nav>
+  </header>
+  <body>
+    <div class="wrapper">
+        {% block content %}
+        {% endblock %}
+    </div>
+  </body>
+</html>

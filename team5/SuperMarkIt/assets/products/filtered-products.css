@@ -1,0 +1,93 @@
+.thumbnails{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 6px;
+}
+
+
+.Products {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.product {
+  background: #d5e4f2;
+  padding: 10px;
+  border: 2px solid #a8b1ba;
+  border-radius: 3px;
+}
+
+.product h5{
+  font-size: 15px;
+  text-align: center;
+  color: #090b17;
+}
+
+
+.product .Tesco{
+  font-size: 0.9em;
+  font-weight: bold;
+  color: #00539F;
+}
+
+.product .Sainsburys{
+  font-size: 0.9em;
+  font-weight: bold;
+  color: #FC8019;
+}
+
+.product .Morrisons{
+  font-size: 0.9em;
+  font-weight: bold;
+  color: #00563F;
+}
+
+.product-price{
+  font-family: Arial;
+  font-size: 0.9em;
+  color: black;
+}
+
+.attibute-qty{
+  display: inline-block;
+}
+
+input[name=quantity]{
+  border: 1px solid grey;
+  border-radius: 5px;
+  size: 2;
+  max-width: 40px;
+  font-size: 16px;
+  font-weight: bold;
+}
+input[name=quantity]:focus{
+  border: 2px solid black;
+}
+
+.units-qty{
+  margin-left: 14px;
+  font-size: 17px;
+}
+
+
+.btn-add-to-basket{
+  margin-left: 30px;
+  padding: 8px;
+  color: white;
+  float: right;
+  background-color: #4bada5;
+  border-radius: 3px;
+  border: #25277a;
+  transition-duration: 0.3s;
+}
+
+.btn-add-to-basket:hover{
+  padding-right: 12px;
+  padding-bottom: 10px;
+  background-color: #0252a3;
+  transform: skewX(-10deg);
+  border-radius: 6px;
+  transition-duration: 0.5s;
+}

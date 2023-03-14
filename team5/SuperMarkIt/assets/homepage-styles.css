@@ -1,0 +1,74 @@
+.site-description h2{
+  color: #2A7FFD;
+  font-family: arial;
+  font-size: 4em;
+  text-shadow: 2px 2px black;
+  margin-top: 0px;
+}
+
+.site-description p{
+  color: black;
+  font-family: arial;
+  font-size: 1.5em;
+  ;
+}
+
+.site-description{
+  background: rgba(153, 160, 171, 0.7);
+  opacity: 1;
+  padding: 15px;
+  transition-duration: 1s;
+  border-radius: 3px;
+}
+
+.site-description:hover {
+  /* The 4th value is opacity*/
+  background: rgba(101, 102, 104, 0.9);
+  padding: 50px;
+  border-radius: 8px;
+  transition-duration: 1s;
+}
+
+.tag-about{
+  font-size: 1.2em;
+  border: 1px solid #02366D;
+  padding: 9px;
+  border-radius: 15px;
+  color: black;
+  text-decoration: none;
+  background-color: #A9C0E3;
+  font-family: Verdana;
+}
+
+.hero {
+  /* Sizing */
+  width: 100vw;
+  height: 100vh;
+  /* Flexbox stuff */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Text styles */
+  text-align: center;
+
+  /* Background styles */
+  background-image: url(hero-homepage.jpg);
+  background-size: cover;
+  background-position: relative;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.created-by p{
+  text-align: right;
+  margin: 0;
+  color: black;
+  font-size: 7px;
+}
+
+*body{
+  margin-left: 0;
+  margin-top: 0;
+  overflow-x: hidden;
+}
